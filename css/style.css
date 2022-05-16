@@ -1,0 +1,197 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@700&family=Source+Code+Pro&family=Updock&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+
+}
+
+
+body{
+    background-image: url(../img/Dati.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.contenedor {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4, fr);
+    grid-template-rows: 0.5fr 2.5fr 1fr ;
+    grid-template-areas: "header header header section"        
+                        "main  main main section"
+                        "footer footer footer section";
+    
+    
+    
+}
+
+
+header {
+    background-color: rgba(2, 2, 2, 0.335);
+    grid-area: header;
+    
+    
+}
+
+header h1 {
+    
+    text-align: center;
+
+
+}
+
+.navbar {
+    padding-top: 20px;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    list-style: none;
+    font-weight: bolder;
+    font-family: 'Source Code Pro', monospace
+}
+
+nav ul li :hover {
+    font-size: 20px;    
+}
+
+
+main {
+    background-color: rgba(0, 0, 0, 0.056);
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.card-pizza{
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.card-pizza:hover{    
+    transform: rotate(6deg);   
+    
+}
+
+
+section{    
+    grid-area: section;    
+    display: flex;    
+       
+}
+
+.redes{    
+   background-color: black;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+    
+}
+.bi-instagram{
+    color: rgb(172, 157, 23);
+font-size: 50px;
+}
+.bi-facebook{
+    color: rgb(172, 157, 23);
+font-size: 50px;
+}
+.bi-twitter{
+    color: rgb(172, 157, 23);
+font-size: 50px;
+}
+
+
+footer {    
+    grid-area: footer;
+    font-size: 25px;
+    text-align: center;
+    background-color: indianred;
+}
+/*area*/
+
+.contenedor-area {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-rows: 0.5fr 1fr 2fr 2fr;
+    grid-template-areas: "header header header section"        
+                        "main  main main section"
+                        "footer footer footer section";
+    
+        
+}
+    
+.contenedor-mapa{
+    grid-area: main;
+    display: flex;
+    justify-content: center;  
+}       
+/* menu*/
+.contenedor-menu {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr 2.5fr 1fr;
+    grid-template-areas: "header header header section"        
+                        "main  main main section"
+                        "footer footer footer section";
+    
+    gap: 15px;
+}
+.redes-menu {    
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+           
+  
+}
+/*mq*/
+
+
+@media screen and (max-width:1024px) {
+    .contenedor-menu {
+                
+    grid-template-areas: "header header header"        
+                         "main  main main"
+                         "section section section"
+                        "footer footer footer";
+        
+
+        
+    }
+    section{
+        grid-area: section;
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+
+    }
+
+    .redes-menu{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+                
+    }
+    .bi-instagram{
+        color: rgb(172, 157, 23);
+    font-size: 30px;
+    }
+    .bi-facebook{
+        color: rgb(172, 157, 23);
+    font-size: 30px;
+    }
+    .bi-twitter{
+        color: rgb(172, 157, 23);
+    font-size: 30px;
+    }
+}
+
